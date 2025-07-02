@@ -4,6 +4,44 @@
   <meta charset="UTF-8">
   <title>Daksh Khetarpaul - Portfolio</title>
   <style>
+
+ .education-header {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between text and logo */
+ }
+
+ .education-header img {
+  max-width: 200px; /* adjust logo size */
+  height: auto;
+ }
+
+   footer {
+     background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 50px 10px;
+    margin-top: 40px;
+    font-size: 15px;
+    }
+
+    footer p {
+    margin: 0;
+    }
+
+    footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    }
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+  
+
+
     .experience-description ul {
       padding-left: 20px; /* indent bullets */
        }
@@ -99,9 +137,11 @@
 
   <nav>
     <a href="#introduction">Introduction</a>
+    <a href="#education">Education</a>
     <a href="#experiences">Experiences</a>
     <a href="#projects">Projects</a>
     <a href="#resume">Download Resume</a>
+    <a href="#connect">Connect</a>
   </nav>
 
   <section id="introduction">
@@ -109,6 +149,20 @@
     <p>
       Hello! I am Daksh Khetarpaul, a Motivated and skilled Computer Engineering graduate with hands-on experience in full-stack development, machine learning, and data analysis. Seeking opportunities to leverage skills and knowledge in a dynamic professional environment.
     </p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="experience-item">
+      <div class="education-header">
+        <img src="logomain.png" alt="Rutgers Logo">
+      </div>
+      <ul>
+        <li>B.S. in Computer Engineering</li>
+        <li>Sep 2021 - May 2025</li>
+        <li>Relevant Coursework: Computer Architecture, Data Structures and Algorithms, Software Engineering, Machine Learning, Discrete Maths, Linear Algebra, Digital System Design, Hardware & System Security</li>
+      </ul>
+    </div>
   </section>
 
   <section id="experiences">
@@ -215,5 +269,12 @@
       });
     });
   </script>
+  <footer id="connect">
+    <p>Connect With me Here</p>
+    <div>
+      <a href="https://linkedin.com/in/daksh-khetarpaul-b62a73213" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/dakshkhetarpaul" target="_blank">🐱 GitHub</a>
+    </div>
+  </footer>
 </body>
 </html>
