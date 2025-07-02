@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daksh Khetarpaul - Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="welcomeMessage"></h1>
+
+  <p>
+    <button onclick="downloadResume()">Download My Resume</button>
+  </p>
+
+  <script>
+    // JavaScript to set welcome text dynamically
+    document.getElementById('welcomeMessage').textContent = "Welcome to my portfolio!";
+
+    // Function to trigger download
+    function downloadResume() {
+      // Adjust the file path if your PDF is in a different folder
+      window.location.href = "daksh-khetarpaul-rutgerssoe25.pdf";
+    }
+  </script>
+
+</body>
+</html>
