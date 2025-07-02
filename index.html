@@ -4,40 +4,216 @@
   <meta charset="UTF-8">
   <title>Daksh Khetarpaul - Portfolio</title>
   <style>
+    .experience-description ul {
+      padding-left: 20px; /* indent bullets */
+       }
+
+    
+      .experience-description li {
+      margin-bottom: 10px; /* space between bullets */
+       line-height: 1.5;    /* improve readability */
+           }
+
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 100px;
-      background-color: #f4f4f4;
-    }
-    h1 {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
       color: #333;
     }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
+
+    header {
+      background: #343a40;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #495057;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background: #6c757d;
+    }
+
+    section {
+      padding: 18px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      margin-top: 0;
+      margin-bottom: 20px; /* reduces bottom margin */
+    }
+
+    .experience-item {
+      margin-bottom: 20px;
+    }
+
+    .experience-item h3 {
+      margin: 0;
+      color: #007bff;
       cursor: pointer;
+    }
+
+    .experience-description {
+      display: none;
+      margin-top: 5px;
+    }
+
+    .download-button {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    .download-button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
 
-  <h1 id="welcomeMessage"></h1>
+  <header>
+    <h1>Welcome to the Portfolio of Daksh Khetarpaul</h1>
+  </header>
 
-  <p>
-    <button onclick="downloadResume()">Download My Resume</button>
-  </p>
+  <nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#experiences">Experiences</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Download Resume</a>
+  </nav>
+
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p>
+      Hello! I am Daksh Khetarpaul, a Motivated and skilled Computer Engineering graduate with hands-on experience in full-stack development, machine learning, and data analysis. Seeking opportunities to leverage skills and knowledge in a dynamic professional environment.
+    </p>
+  </section>
+
+  <section id="experiences">
+    <h2>Experiences</h2>
+
+    <div class="experience-item">
+      <h3 onclick="toggleDescription('promptly')">Promptly Technologies, Inc - Full Stack Intern</h3>
+      <div id="promptly" class="experience-description">
+        <ul>
+          <li>Developed “SamurEye“, an EMR (Electronic Medical Record) system for Refractive Surgeries using Node.js and React.js, ensuring optimal user experience for 200+ users at Boston Vision.</li>
+          <li>Integrated Power BI to streamline patient data analysis workflows, achieving a 27% reduction in process time.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <h3 onclick="toggleDescription('winlab')">WINLAB - Machine Learning Intern</h3>
+      <div id="winlab" class="experience-description">
+        <ul>
+          <li>Utilized Python and Slurm on a version of AlexNet with multiple test cases on Rutgers iLab GPUs to analyze the correlation in accuracy and bias.</li>
+          <li>Performed tests on 10,000 self-generated simulations to evaluate the potential of machine learning in animal behavioral studies.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="experience-item">
+      <h3 onclick="toggleDescription('tripat')">Tripat Infoways - Software Engineering Intern</h3>
+      <div id="tripat" class="experience-description">
+        <ul>
+          <li>Designed a website using HTML and JavaScript, leading to a 30% increase in web traffic.</li>
+          <li>Implemented data handling with PHP and MySQL, enhancing site performance by 20%.</li>
+        </ul>
+      </div>
+    </div>
+  
+
+  <div class="experience-item">
+    <h3 onclick="toggleDescription('la')">Rutgers Learning Centers - Learning Assistant</h3>
+    <div id="la" class="experience-description">
+      <ul>
+        <li>Assisted the course faculty in 90+ lecture and recitation sessions for Precalculus.</li>
+        <li>Interacted with 70+ students per session, improving course structure and maximizing learning outcomes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+  
+    <div class="experience-item">
+      <h3 onclick="toggleDescription('eyehealth')">Eye Health Monitor – Lead Engineer</h3>
+      <div id="eyehealth" class="experience-description">
+        Built a real-time blink detection system on Raspberry Pi 5 using OpenCV, dlib, and Picamera to track Eye Aspect Ratio (EAR) and deliver alerts to promote better eye health.
+        Integrated Firebase and Power BI for real-time data synchronization and behavioral analytics.
+        <br>
+        <a href="https://github.com/dakshkhetarpaul/Eye-Health-Monitor" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  
+    <div class="experience-item">
+      <h3 onclick="toggleDescription('mlproject')">Machine Learning 443 Project – ML Engineer</h3>
+      <div id="mlproject" class="experience-description">
+        Evaluated predictive models by leveraging Machine Learning methodologies such as Train-Test Split, K-Fold Cross-Validation, and feature extraction.
+        Implemented Linear Regression and Support Vector Regression to predict song streaming performance based on critical audio features such as danceability, acoustics, and tempo, utilizing a raw dataset of 953 samples.
+        Designed and deployed a robust text classification pipeline using Naive Bayes to accurately identify and classify phishing emails by using a dataset of 18,600 email records.
+        <br>
+        <a href="https://github.com/dakshkhetarpaul/Triple-Threat-ML" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  
+    <div class="experience-item">
+      <h3 onclick="toggleDescription('gymhaven')">Gym Haven (e-commerce Website) – Software Engineer</h3>
+      <div id="gymhaven" class="experience-description">
+        Developed a gym equipment website leveraging RESTful APIs utilizing Node.js and MongoDB.
+        Implemented Google Sign-In, Stripe, EasyPost, and OpenAI APIs.
+        <br>
+        <a href="https://github.com/hransom528/ECE452-SoftEng-Project" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="resume">
+    <h2>Download My Resume</h2>
+    <a href="daksh-khetarpaul-rutgerssoe25.pdf" download class="download-button">
+      📄 Download Resume (PDF)
+    </a>
+  </section>
 
   <script>
-    // JavaScript to set welcome text dynamically
-    document.getElementById('welcomeMessage').textContent = "Welcome to my portfolio!";
-
-    // Function to trigger download
-    function downloadResume() {
-      // Adjust the file path if your PDF is in a different folder
-      window.location.href = "daksh-khetarpaul-rutgerssoe25.pdf";
+    function toggleDescription(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
     }
-  </script>
 
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
